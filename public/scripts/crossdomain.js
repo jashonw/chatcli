@@ -20,6 +20,14 @@ function rawOutput(data) {
     log('SENT: ' + data);
 }
 
+function xmlInput(data) {
+    log('XML RECV: ' + data);
+}
+
+function xmlOutput(data) {
+    log('XML SENT: ' + data);
+}
+
 function onConnect(status) {
     debugger
     if (status == Strophe.Status.CONNECTING) {
@@ -37,11 +45,16 @@ function onConnect(status) {
         connection.disconnect();
     }
 }
+//Strophe.log = function(level, msg) {
+//    console.log(level + ' : ' + msg);
+//};
 
 $(document).ready(function () {
     connection = new Strophe.Connection(BOSH_SERVICE);
     connection.rawInput = rawInput;
     connection.rawOutput = rawOutput;
+    //connection.xmlInput = xmlInput;
+    //connection.xmlOutput = xmlOutput;
 
     $('#connect').bind('click', function () {
         var button = $('#connect').get(0);

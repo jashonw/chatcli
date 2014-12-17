@@ -29,8 +29,8 @@ app.configure('development', function () {
 });
 
 // set client file of websocket
-app.get('/chat', function (req, res) {
-    res.sendfile('views/chat.html');
+app.get('/muc', function (req, res) {
+    res.sendfile('views/muc.html');
 });
 app.get('/chatcli', function (req, res) {
     res.sendfile('views/crossdomain.html');
