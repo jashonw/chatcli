@@ -1,7 +1,7 @@
 /*
 Created by Jashon Wan
  */
-var BOSH_SERVICE = 'http://192.168.1.223:7070/http-bind/'; //'http://bosh.metajack.im:5280/xmpp-httpbind'
+var BOSH_SERVICE = 'http://JW:7070/http-bind/'; //'http://bosh.metajack.im:5280/xmpp-httpbind'
 var connection = null;
 
 function log(msg) {
