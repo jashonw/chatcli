@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Strophe.js Basic Cross-Domain Example</title>
+
+  <script type='text/javascript'
+	  src='scripts/jquery.min.js'></script>
+  <!--
+  <script type='text/javascript'
+          src='scripts/flXHR.js'></script>
+          -->
+  <script type='text/javascript'
+          src='scripts/xml2json.min.js'></script>
+  <script type='text/javascript'
+	  src='scripts/strophe.js'></script>
+  <script type='text/javascript'
+          src='scripts/strophe.muc.js'></script>
+  <!--
+  <script type='text/javascript'
+          src='scripts/strophe.flxhr.js'></script>
+  -->
+  <script type='text/javascript'
+	  src='scripts/chatroom.js'></script>
+</head>
+<body>
+  <div id='login' style='text-align: center'>
+    <form name='cred'>
+      <label for='jid'>JID:</label>
+      <input type='text' id='jid' />
+      <label for='pass'>Password:</label>
+      <input type='password' id='pass' />
+      <input type='button' id='connect' value='connect' />
+    </form>
+    <p></p>
+    <form name='room'>
+      <label for='jid'>RoomID:</label>
+      <input type='text' id='roomid' />
+      <input type='button' id='createroom' value='CreateRoom' onclick="createRoom()"/>
+      <input type='button' id='listroom' value='ListRoom' onclick="listRoom()"/>
+      <label for='jid'>JoinJID:</label>
+      <input type='text' id='joinJid' />
+      <input type='button' id='joinroom' value='JoinRoom' onclick="joinRoom()"/>
+    </form>
+    <p></p>
+    <form name='entermsg'>
+      <input type='text' id='msgcontent' />
+      <input type='button' id='sendmsg' value='Send' onclick="sendMsg(1)"/>
+      <label for='jid'>NickName:</label><input type='text' id='msgreceiver' />
+      <input type='button' id='sendmsgp' value='SendPrivate' onclick="sendMsg(0)"/>
+    </form>
+  </div>
+  <hr />
+  <div id='log'></div>
+</body>
+</html>

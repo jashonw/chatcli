@@ -1,4 +1,6 @@
-//import package
+/*
+ Created by Jashon Wan
+ */
 var express = require('express')
     , path = require('path')
     , app = express()
@@ -30,8 +32,9 @@ app.configure('development', function () {
 
 // set client file of websocket
 app.get('/muc', function (req, res) {
-    res.sendfile('views/muc.html');
+    res.sendfile('views/muctest.html');
 });
+
 app.get('/chatcli', function (req, res) {
     res.sendfile('views/crossdomain.html');
 });
